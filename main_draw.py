@@ -7,6 +7,9 @@ import shared
 WINDOW_TITLE = 'video'
 
 def init_draw(frame):
+    cv2.namedWindow(WINDOW_TITLE, cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty(WINDOW_TITLE,cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
+
     img = np.zeros((shared.height, shared.width, 3), dtype=np.uint8)
 
     # Отображение изображения на экране
