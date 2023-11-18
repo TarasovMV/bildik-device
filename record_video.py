@@ -15,7 +15,7 @@ def init_record():
     # picam2.stop_preview()
 
     picam2 = Picamera2()
-    video_config = picam2.create_video_configuration()
+    video_config = picam2.create_video_configuration(main={"size": (1920, 1080)})
     picam2.configure(video_config)
 
     encoder = H264Encoder(10000000)
