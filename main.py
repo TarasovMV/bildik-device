@@ -16,10 +16,12 @@ if __name__ == "__main__":
     ws_process = multiprocessing.Process(target=init_ws, args=(ws_receive_stack,))
     manager_process = multiprocessing.Process(target=init_manager, args=(ws_receive_stack,))
     calibration_process = multiprocessing.Process(target=init_calibration, args=(ws_receive_stack, frame))
+    camera_process = multiprocessing.Process(target=init_ws)
 
-    ws_process.start()
-    manager_process.start()
-    calibration_process.start()
+    # ws_process.start()
+    # manager_process.start()
+    # calibration_process.start()
+    # camera_process.start()
     
     init_draw(frame)
     

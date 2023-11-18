@@ -11,9 +11,14 @@ def init_draw(frame):
     cv2.setWindowProperty(WINDOW_TITLE,cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
 
     img = np.zeros((shared.height, shared.width, 3), dtype=np.uint8)
+    background_color = (0, 255, 0)  # Здесь установлен зеленый цвет
+
+    # Заполнение фона цветом
+    image_filled = img.copy()
+    image_filled[:, :] = background_color
 
     # Отображение изображения на экране
-    cv2.imshow(WINDOW_TITLE, img)
+    cv2.imshow(WINDOW_TITLE, image_filled)
     cv2.waitKey(1)
 
     while True:
