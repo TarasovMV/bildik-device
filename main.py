@@ -2,6 +2,7 @@ import multiprocessing
 
 from ws import init_ws
 from manager import init_manager
+from record_video import init_record
 from main_draw import init_draw
 from modules.calibration_module import init_calibration
     
@@ -16,7 +17,7 @@ if __name__ == "__main__":
     ws_process = multiprocessing.Process(target=init_ws, args=(ws_receive_stack,))
     manager_process = multiprocessing.Process(target=init_manager, args=(ws_receive_stack,))
     calibration_process = multiprocessing.Process(target=init_calibration, args=(ws_receive_stack, frame))
-    camera_process = multiprocessing.Process(target=init_ws)
+    camera_process = multiprocessing.Process(target=init_record)
 
     # ws_process.start()
     # manager_process.start()
