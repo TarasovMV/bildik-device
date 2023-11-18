@@ -23,3 +23,5 @@ def init_record():
     picam2.start_recording(encoder, 'test.h264')
     time.sleep(10)
     picam2.stop_recording()
+
+    print('stop record')
