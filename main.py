@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # ws_process.start()
     # manager_process.start()
     # calibration_process.start()
-    # camera_process.start()
+    camera_process.start()
     
     init_draw(frame)
     
